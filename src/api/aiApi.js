@@ -4,7 +4,7 @@
  */
 
 import { GoogleGenerativeAI, HarmCategory, HarmBlockThreshold } from '@google/generative-ai';
-import axios from 'axios';
+// import axios from 'axios'; // Removed unused import
 
 // Main API function
 export const callAIApi = async (prompt) => {
