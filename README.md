@@ -1,6 +1,44 @@
-# Getting Started with Create React App
+# Collaborative Editor with AI Integration
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time collaborative rich text editor with AI integration that allows users to interact with AI for text editing and enhancements.
+
+## Features
+
+- Rich text editor using Tiptap
+- AI-powered text editing (shorten, lengthen, edit, convert to table)
+- Chat interface for interacting with AI
+- Selection-based AI suggestions
+- Preview mode for comparing original and AI-suggested edits
+
+## Setup
+
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Start the development server with `npm start`
+
+## AI Integration
+
+This application uses a multi-layered approach to AI-powered text editing:
+
+1. **HuggingFace Inference Client (Primary)**: Uses the official `@huggingface/inference` client to access AI models
+2. **Direct API Fallback**: Falls back to direct API calls if the client encounters issues
+3. **Built-in processing logic**: Uses JavaScript for text transformations when external services are unavailable
+
+### Using HuggingFace (Enhanced AI)
+
+For the best AI capabilities:
+
+1. Sign up for a free account at [HuggingFace](https://huggingface.co/)
+2. Generate an API token in your HuggingFace settings
+3. Add the token to your `.env` file: `REACT_APP_HUGGINGFACE_TOKEN=your_token_here`
+
+The application has robust fallback mechanisms:
+
+- First tries the HuggingFace Inference client with summarization models
+- If that fails, tries direct API calls to multiple model endpoints
+- Finally falls back to built-in processing that works without external services
+
+No API key is required - the app will use smart built-in fallback logic if no API keys are available.
 
 ## Available Scripts
 

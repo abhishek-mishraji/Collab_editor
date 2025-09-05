@@ -1,3 +1,12 @@
+/* Basic CSS for the Collaborative Editor */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* Main Layout */
 .App {
   display: flex;
@@ -8,6 +17,7 @@
 .main-editor {
   flex: 1;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .app-title {
@@ -20,6 +30,7 @@
   height: calc(100% - 3rem);
   border: 1px solid #ddd;
   border-radius: 4px;
+  overflow: hidden;
 }
 
 .sidebar {
@@ -27,6 +38,7 @@
   height: 100vh;
   border-left: 1px solid #ddd;
   background-color: #f8f9fa;
+  overflow: hidden;
 }
 
 /* Editor Component */
@@ -46,14 +58,6 @@
 .ProseMirror {
   outline: none;
   height: 100%;
-}
-
-.ProseMirror p.is-editor-empty:first-child::before {
-  content: attr(data-placeholder);
-  float: left;
-  color: #adb5bd;
-  pointer-events: none;
-  height: 0;
 }
 
 /* Chat Sidebar */
@@ -96,6 +100,7 @@
   padding: 0.75rem;
   border-radius: 0.5rem;
   max-width: 80%;
+  word-break: break-word;
 }
 
 .user-message .message-content {
@@ -276,13 +281,4 @@
 
 .button-icon {
   margin-right: 0.25rem;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
