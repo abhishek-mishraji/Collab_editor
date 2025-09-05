@@ -1,3 +1,9 @@
+Deployed:
+
+<h1>https://collab-editor-7sap-5rm3ondhx-abhisheks-projects-46bb5ca5.vercel.app/</h1>
+
+
+
 # Collaborative Editor with AI Integration
 
 A real-time collaborative rich text editor with AI integration that allows users to interact with AI for text editing and enhancements.
